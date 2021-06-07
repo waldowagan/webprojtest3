@@ -25,9 +25,9 @@ namespace webprojtest3.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return View(); 
         }
-
+        //change is coming
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
