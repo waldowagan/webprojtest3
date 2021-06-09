@@ -13,6 +13,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.f_Name)
             </th>
             <th>
@@ -21,21 +24,13 @@
             <th>
                 @Html.DisplayNameFor(model => model.payment)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserID)
-            </th>
+
 
             <th>
                 @Html.DisplayNameFor(model => model.email)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.phone_No)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.emergency_Contact_Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.emergency_Contact_No)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.membership_Start)
@@ -56,6 +51,9 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.UserID)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.f_Name)
             </td>
             <td>
@@ -65,21 +63,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.payment)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserID)
-            </td>
+
 
             <td>
                 @Html.DisplayFor(modelItem => item.email)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.phone_No)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.emergency_Contact_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.emergency_Contact_No)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.membership_Start)
