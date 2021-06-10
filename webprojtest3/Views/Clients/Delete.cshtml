@@ -12,22 +12,22 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.membership_start)
+            @Html.DisplayNameFor(model => model.ClientID)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.membership_start)
+            @Html.DisplayFor(model => model.ClientID)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.membership_end)
+            @Html.DisplayNameFor(model => model.membership_start_client)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.membership_end)
+            @Html.DisplayFor(model => model.membership_start_client)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UserID)
+            @Html.DisplayNameFor(model => model.membership_end_client)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UserID)
+            @Html.DisplayFor(model => model.membership_end_client)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.f_Name)
@@ -80,7 +80,7 @@
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="ClientID" />
+        <input type="hidden" asp-for="UserID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>

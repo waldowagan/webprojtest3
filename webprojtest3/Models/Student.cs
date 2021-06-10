@@ -8,7 +8,7 @@ namespace webprojtest3.Models
 {
     public class Student : User
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+       // [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string StudentID { get; set; }
         public DateTime membership_Start { get; set; }
         public DateTime membership_End { get; set; }

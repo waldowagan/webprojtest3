@@ -18,19 +18,18 @@
                 <span asp-validation-for="ClientID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="membership_start" class="control-label"></label>
-                <input asp-for="membership_start" class="form-control" />
-                <span asp-validation-for="membership_start" class="text-danger"></span>
+                <label asp-for="membership_start_client" class="control-label"></label>
+                <input asp-for="membership_start_client" class="form-control" />
+                <span asp-validation-for="membership_start_client" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="membership_end" class="control-label"></label>
-                <input asp-for="membership_end" class="form-control" />
-                <span asp-validation-for="membership_end" class="text-danger"></span>
+                <label asp-for="membership_end_client" class="control-label"></label>
+                <input asp-for="membership_end_client" class="form-control" />
+                <span asp-validation-for="membership_end_client" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="UserID" class="control-label"></label>
-                <input asp-for="UserID" class="form-control" />
-                <span asp-validation-for="UserID" class="text-danger"></span>
+                <select asp-for="UserID" class ="form-control" asp-items="ViewBag.UserID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="f_Name" class="control-label"></label>

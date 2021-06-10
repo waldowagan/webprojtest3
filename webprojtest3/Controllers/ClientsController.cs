@@ -34,7 +34,7 @@ namespace webprojtest3.Controllers
             }
 
             var client = await _context.Client
-                .FirstOrDefaultAsync(m => m.ClientID == id);
+                .FirstOrDefaultAsync(m => m.UserID == id);
             if (client == null)
             {
                 return NotFound();
@@ -54,7 +54,7 @@ namespace webprojtest3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ClientID,membership_start,membership_end,UserID,f_Name,l_Name,email,phone_No,emergency_Contact_Name,emergency_Contact_No,login_Time,user_Type")] Client client)
+        public async Task<IActionResult> Create([Bind("ClientID,membership_start_client,membership_end_client,UserID,f_Name,l_Name,email,phone_No,emergency_Contact_Name,emergency_Contact_No,login_Time,user_Type")] Client client)
         {
             if (ModelState.IsValid)
             {
@@ -86,9 +86,9 @@ namespace webprojtest3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("ClientID,membership_start,membership_end,UserID,f_Name,l_Name,email,phone_No,emergency_Contact_Name,emergency_Contact_No,login_Time,user_Type")] Client client)
+        public async Task<IActionResult> Edit(string id, [Bind("ClientID,membership_start_client,membership_end_client,UserID,f_Name,l_Name,email,phone_No,emergency_Contact_Name,emergency_Contact_No,login_Time,user_Type")] Client client)
         {
-            if (id != client.ClientID)
+            if (id != client.UserID)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace webprojtest3.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ClientExists(client.ClientID))
+                    if (!ClientExists(client.UserID))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace webprojtest3.Controllers
             }
 
             var client = await _context.Client
-                .FirstOrDefaultAsync(m => m.ClientID == id);
+                .FirstOrDefaultAsync(m => m.UserID == id);
             if (client == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace webprojtest3.Controllers
 
         private bool ClientExists(string id)
         {
-            return _context.Client.Any(e => e.ClientID == id);
+            return _context.Client.Any(e => e.UserID == id);
         }
     }
 }
